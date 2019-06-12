@@ -121,7 +121,7 @@ You can create a view erb file inside **app/views** manually. This framework use
 	<%= erb :"partial/form" %>
 ```
 
-### To Create Helpers
+## To Create Helpers
 Helper files can be created inside **app/helpers** manually. Example:
 ```
 # app/helpers/html.rb
