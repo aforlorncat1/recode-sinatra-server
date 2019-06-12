@@ -69,7 +69,7 @@ require 'uri'
 ```
 4) Done. You're ready. 
 
-### To Create Controllers
+## To Create Controllers
 You can create a controller ruby file inside **app/controllers** manually. As long as there is no conflicted routes, you can create many controller files. Sinatra will go through each controller file and compile all available routes.
 
 In this example, let's create 'sessions' routing:
@@ -89,9 +89,8 @@ get '/user/dashboard' do
 	erb :dashboard
 end
 ```
-<br>
 
-#### To Create Views  
+## To Create Views  
 
 You can create a view erb file inside **app/views** manually. This framework uses erb gem to generate the view. Views can be created in full-form or partial-form. Examples,  
 
@@ -121,7 +120,6 @@ You can create a view erb file inside **app/views** manually. This framework use
 	<h2> User Data </h2>
 	<%= erb :"partial/form" %>
 ```
-<br>
 
 ### To Create Helpers
 Helper files can be created inside **app/helpers** manually. Example:
