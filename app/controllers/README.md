@@ -1,10 +1,10 @@
 app/controllers/*.rb
 =================
-This is your routing and logic folder. It starts with routing address and end with either
-providing a view or redirection. This framework provides full flexibility and room for
+This is your routing and logic folder. Basic routing requires a url address and a destination.
+This framework provides full flexibility and room for
 customization.
 
-you can create a controller ruby file, in this example, let's create 'users' routing:
+For example, a users controller file might look something like this:
 ```
 # app/controllers/users.rb
 
@@ -21,6 +21,7 @@ get '/user/dashboard' do
 	erb :dashboard
 end
 ```
+Remember to link/require the appropriate controller if you require access to their related objects.
 
 You can create many controller files as long as there is no conflicted routes. Sinatra go through
-each controller file and compile all available route.
+each controller file and compile all available routes.

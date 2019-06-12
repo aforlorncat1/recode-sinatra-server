@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Ruby Version
-ruby "2.2.1"
+# ruby
 
 # Adding Sinatra Drivers
 gem 'sinatra'
@@ -27,11 +27,4 @@ gem 'rspec'
 group :development, :test do
 	# Adding shotgun for local web hosting
 	gem 'shotgun'
-end
-
-group :production do
-	# Heroku
-	# ==================
-	gem 'rails_12factor' # Heroku Gem Supports	
-	gem 'puma' # Using puma for  
 end

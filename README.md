@@ -1,56 +1,39 @@
-#Sinatra Web Server
+## Sinatra Web Server
 ## Repo details
 | Details   |  | 
 | :--------------- | -------: |
-| Re-created by: | Holloway, Chew Kean Ho |
-| Version:    | 0.0.4   |
-| Contribution:    | Hobby. Best effort basis.   |
-<br><br>
+| Re-created by: | The Recode Team |
+| Version:    | 0.0.1   |
+<br>
 ## Purpose
-This Ruby Sinatra web skeleton was re-furbished for rapid prototyping a web API before deploying to rails server. It's referenced from Rails file structure with mild tweaking and CodeDivision Sinatra skeleton.
+As an transitional educational tool before the magic of Rails, this framework was built using Sinatra and modelled after Rails' file structure. It utilizes Sinatra's extension of ActiveRecord. Unlike Rails, it is fully flexible and less opinionated.
 <br><br>
 ##Supports
 1. Local Support
-2. Heroku Support - using PUMA
+2. Heroku Support (Disabled for now)
 
 >**NOTE**:
->This guide assumes you are good with Ruby, Heroku and understands MVC architecture patterns.
+>This guide assumes you are good with Ruby and understand MVC architecture patterns.
 
 <br><br>
 ## Common Setup
-1) Perform a git clone to this repo using the following link:
+1) Clone the repo to your local machine.
 ```
-# http
-https://github.com/hollowaykeanho/sinatra-web-server.git
-
-# ssh
-git@github.com:hollowaykeanho/sinatra-web-server.git
-```
-2)  Rename the skeleton if needed
+2) Rename the skeleton if needed.
 ```
 $ mv sinatra-web-server <your-desired-app-name>
 ```
-3) Enter into the skeleton and perform bundle install
+3) Run bundle install.
 ```
 $ cd <your-desired-app-name>
 $ bundle install  
 # Open issue in this github repo if any issue
 ```
-4) Perform a short test by launching the server
+4) Perform a short test by launching the server.
 ```
-$ rake server
+$ shotgun config.ru
 ```
 5) Hooray! You may now begin your code development.
-<br><br>
-
-## How To Use
-The skeleton is primarily based on Rails file structure with focus towards MVC architectural pattern. However, unlike Rails, this skeleton is to provide more structural freedom for you to prototype or to bootstrap and idea quickly. The flexibility is up to deploying the app in Heroku.
-<br>
-### To Launch the Server
-Rakefile has a simplified command for launching the server in development mode. To perform, execute:
-```
-$ rake server
-```
 <br><br>
 
 ### To Include/Remove a Gem
@@ -91,7 +74,7 @@ require 'uri'
 <br><br>
 
 ### To Create Controller
-You can create a controller ruby file inside **app/controllers** manually. As long as there is no conflicted routes, you can create many controller files. Sinatra go through each controller file and compile all available route.
+You can create a controller ruby file inside **app/controllers** manually. As long as there is no conflicted routes, you can create many controller files. Sinatra will go through each controller file and compile all available routes.
 
 In this example, let's create 'sessions' routing:
 ```
@@ -110,7 +93,7 @@ get '/user/dashboard' do
 	erb :dashboard
 end
 ```
-<br>
+<br><br>
 ### To Create Views
 You can create a view erb file inside **app/views** manually. This framework uses erb gem to generate the view. Views can be created in full-form or partial-form. Examples,
 #### To create simple erb view file:
@@ -141,18 +124,8 @@ You can create a view erb file inside **app/views** manually. This framework use
 ```
 <br><br>
 
-### To Create Model
-Model creation is supported by Rakefile. To create, simply execute:
-```
-$ rake generate:model NAME=<singular_model_name>
-```
->**NOTE**:
-> Due to maintaining structural freedom, rake will only create model file and **not** with database migration file. You're expected to handle database migration file separately.
-
-<br><br>
-
-### To Create Helper
-Helper file can be created inside **app/helpers** manually and at will. To ensure the functions are working in the helpers, any helper file should has the helpers loop. Example:
+### To Create Helpers
+Helper files can be created inside **app/helpers** manually. Example:
 ```
 # app/helpers/html.rb
 helpers do
@@ -171,7 +144,7 @@ helpers do
 end
 ```
 <br>
-Any function within helpers loop can be called directly like a Ruby modules' methods. Example:
+Any function within helpers loop can be called directly similar to a Ruby method. Example:
 ```
 # app/controllers/root.rb
 post '/' do
@@ -187,111 +160,3 @@ end
 ```
 More information can be found here: http://www.sinatrarb.com/faq.html#helpview
 <br><br>
-
-### To Create Database
-Database creation is supported by Rakefile. To create, execute:
-```
-$ rake db:create
-```
-<br><br>
-
-### To Create Database Migration File
-Database migration file creation is supported by Rakefile. To create, execute:
-```
-$ rake generate:migration NAME=<filename>
-```
->**REMEMBER**: 
->------be careful with ActiveRecord **naming convention** especially singular/plural!
-
-<br><br>
-
-### To Perform Database Migration
-Database migration is supported by Rakefile. To perform, execute:
-```
-$ rake db:migrate
-```
-<br><br>
-
-### To Drop Database
-Database migration is supported by Rakefile. To perform, execute:
-```
-$ rake db:drop
-```
-<br><br>
-
-### To Seed Data into Database
-Database data seeding is supported by Rakefile. To perform, execute:
-```
-$ rake db:seed
-```
-<br><br>
-
-### To View Current Database Migration Version
-Database current migration version view is supported by Rakefile. To perform, execute:
-```
-$ rake db:version
-```
-<br><br>
-
-### To Push to Heroku
->**NOTE**:
->This section assumes you have Heroku Toolbelt installed inside your local computer.
-
-1) Login into your Heroku 
-```
-$ heroku login
-```
-<br>
-2) Inside your code repo, create a Heroku app:
-```
-$ heroku create
-```
-<br>
-3) Rename your Heroku app if needed:
-```
-$ heroku apps:rename new-name
-```
-<br>
-4) Push to heroku server
-```
-$ git push heroku master
-```
-<br>
-5) Skip this step if you're not pushing the app for the first time. Otherwise if you're using database, create the database by:
-```
-$ heroku run rake db:create
-```
-<br>
-6) Perform database migration if you're using database
-```
-$ heroku run rake db:migrate
-```
-<br><br>
-
-### Looking for more Heroku Toolbelt Commands
-Please refer to: https://devcenter.heroku.com/categories/command-line
-<br><br>
-
-## Special Thanks
-1. CodeDivision for their code bootcamp training.
-2. Josh who motivated me to re-code this framework.
-3. All friends and teams in CodeDivision.
-<br><br>
-
-## References
-1. http://www.blacktm.com/talks/building_web_apps_with_rack_and_sinatra/#simple_rack
-2. http://www.sinatrarb.com/intro.html#Environments
-3. http://nycda.com/blog/integrating-activerecord-into-a-sinatra-project/
-4. http://rake.rubyforge.org/
-5. http://recipes.sinatrarb.com/p/development/bundler
-6. https://robots.thoughtbot.com/test-rake-tasks-like-a-boss
-7. http://apidock.com/rails/String/singularize
-8. http://code.tutsplus.com/tutorials/how-to-integrate-rspec-into-a-sinatra-app--net-21564
-9. http://www.millwoodonline.co.uk/blog/mini-minitest-tutorial
-10. http://www.sinatrarb.com/configuration.html
-11. https://devcenter.heroku.com/articles/getting-started-with-ruby-o
-12. https://devcenter.heroku.com/articles/deploying-rails-applications-with-the-puma-web-server
-13. https://blog.codeship.com/puma-vs-unicorn/
-14. https://devcenter.heroku.com/articles/getting-started-with-rails3
-15. http://www.getlaura.com/how-to-enable-sessions-with-sinatra/
-16. http://stackoverflow.com/questions/5693528/how-to-use-sinatra-session
