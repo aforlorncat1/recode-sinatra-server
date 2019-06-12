@@ -4,10 +4,7 @@
 | :--------------- | -------: |
 | Re-created by: | The Recode Team |
 | Version:    | 0.0.1   |
-<br>
-
 ## Purpose  
-
 As an transitional educational tool before the magic of Rails, this framework was built using Sinatra and modelled after Rails' file structure. It utilizes Sinatra's extension of ActiveRecord. Unlike Rails, it is fully flexible and less opinionated.
 <br>
 ## Supports
@@ -17,7 +14,6 @@ As an transitional educational tool before the magic of Rails, this framework wa
 >**NOTE**:
 >This guide assumes you are good with Ruby and understand MVC architecture patterns.
 
-<br><br>
 ## Common Setup
 1) Clone the repo to your local machine.
 
@@ -36,7 +32,6 @@ $ bundle install
 $ shotgun config.ru
 ```
 5) Hooray! You may now begin your code development.
-<br>
 
 ### To Include/Remove a Gem
 1) Include/remove your gem inside Gemfile depending on group. Please note that Heroku will use production only.
@@ -73,7 +68,6 @@ require 'uri'
 #######################################################
 ```
 4) Done. You're ready. 
-<br>
 
 ### To Create Controllers
 You can create a controller ruby file inside **app/controllers** manually. As long as there is no conflicted routes, you can create many controller files. Sinatra will go through each controller file and compile all available routes.
@@ -96,13 +90,16 @@ get '/user/dashboard' do
 end
 ```
 <br>
-### To Create Views
-You can create a view erb file inside **app/views** manually. This framework uses erb gem to generate the view. Views can be created in full-form or partial-form. Examples,
+
+#### To Create Views  
+
+You can create a view erb file inside **app/views** manually. This framework uses erb gem to generate the view. Views can be created in full-form or partial-form. Examples,  
+
 #### To create simple erb view file:
 ```
 # app/views/root.erb
-<h1>This is root page</h1>
-...
+<h1>This is root page</h1>  
+
 # To route it, use ' erb :root ' in controller
 ```
 #### To create erb view file inside a sub-folder:
@@ -145,8 +142,10 @@ helpers do
 	...
 end
 ```
-<br>
-Any function within helpers loop can be called directly similar to a Ruby method. Example:
+<br>  
+
+Any function within helpers loop can be called directly similar to a Ruby method. Example:  
+
 ```
 # app/controllers/root.rb
 post '/' do
@@ -155,9 +154,9 @@ end
 
 # app/views/root.erb
 <html>
-	...
+	<br>
 	<%= em("String") %>
-	...
+	<br>
 </html>
 ```
 More information can be found here: http://www.sinatrarb.com/faq.html#helpview
