@@ -1,14 +1,16 @@
-## Sinatra Web Server
+# Sinatra Web Server
 ## Repo details
 | Details   |  | 
 | :--------------- | -------: |
 | Re-created by: | The Recode Team |
 | Version:    | 0.0.1   |
 <br>
-## Purpose
+
+## Purpose  
+
 As an transitional educational tool before the magic of Rails, this framework was built using Sinatra and modelled after Rails' file structure. It utilizes Sinatra's extension of ActiveRecord. Unlike Rails, it is fully flexible and less opinionated.
-<br><br>
-##Supports
+<br>
+## Supports
 1. Local Support
 2. Heroku Support (Disabled for now)
 
@@ -18,7 +20,7 @@ As an transitional educational tool before the magic of Rails, this framework wa
 <br><br>
 ## Common Setup
 1) Clone the repo to your local machine.
-```
+
 2) Rename the skeleton if needed.
 ```
 $ mv sinatra-web-server <your-desired-app-name>
@@ -73,7 +75,7 @@ require 'uri'
 4) Done. You're ready. 
 <br><br>
 
-### To Create Controller
+### To Create Controllers
 You can create a controller ruby file inside **app/controllers** manually. As long as there is no conflicted routes, you can create many controller files. Sinatra will go through each controller file and compile all available routes.
 
 In this example, let's create 'sessions' routing:
