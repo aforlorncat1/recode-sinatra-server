@@ -36,7 +36,7 @@ $ bundle install
 $ shotgun config.ru
 ```
 5) Hooray! You may now begin your code development.
-<br><br>
+<br>
 
 ### To Include/Remove a Gem
 1) Include/remove your gem inside Gemfile depending on group. Please note that Heroku will use production only.
@@ -73,7 +73,7 @@ require 'uri'
 #######################################################
 ```
 4) Done. You're ready. 
-<br><br>
+<br>
 
 ### To Create Controllers
 You can create a controller ruby file inside **app/controllers** manually. As long as there is no conflicted routes, you can create many controller files. Sinatra will go through each controller file and compile all available routes.
@@ -95,7 +95,7 @@ get '/user/dashboard' do
 	erb :dashboard
 end
 ```
-<br><br>
+<br>
 ### To Create Views
 You can create a view erb file inside **app/views** manually. This framework uses erb gem to generate the view. Views can be created in full-form or partial-form. Examples,
 #### To create simple erb view file:
@@ -124,7 +124,7 @@ You can create a view erb file inside **app/views** manually. This framework use
 	<h2> User Data </h2>
 	<%= erb :"partial/form" %>
 ```
-<br><br>
+<br>
 
 ### To Create Helpers
 Helper files can be created inside **app/helpers** manually. Example:
@@ -161,4 +161,4 @@ end
 </html>
 ```
 More information can be found here: http://www.sinatrarb.com/faq.html#helpview
-<br><br>
+<br>
