@@ -44,7 +44,7 @@ $ bundle install
 ```
 3) Head to **config\environments\init.rb** to ensure your require is aligned to your adjustment.
 ```
-# Perform requiring gem that we need
+# Perform the gem requiring that we need
 #######################################################
 	# basic
 require 'rubygems'
@@ -72,7 +72,7 @@ require 'uri'
 ## To Create Controllers
 You can create a controller ruby file inside **app/controllers** manually. As long as there is no conflicted routes, you can create many controller files. Sinatra will go through each controller file and compile all available routes.
 
-In this example, let's create 'sessions' routing:
+In this example, let's create the 'sessions' routing:
 ```
 # app/controllers/users.rb
 
@@ -157,5 +157,6 @@ end
 	<br>
 </html>
 ```
+### More information on each of the folders can be found in the ReadME's in each folder ###
 More information can be found here: http://www.sinatrarb.com/faq.html#helpview
 <br>
